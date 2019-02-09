@@ -558,24 +558,24 @@ a.active {
   }
 
  #one {
-   background-image: url("/UI/foods2.jpg");
+   background-image: url("/Front-end/foods2.jpg");
    background-size: cover;
    margin-right: 20px;
  }
 
  #two {
-  background-image: url("/UI/foods3.jpg");
+  background-image: url("/Front-end/foods3.jpg");
   background-size: cover;
  }
 
  #three {
-  background-image: url("/UI/foods4.jpg");
+  background-image: url("/Front-end/foods4.jpg");
   background-size: cover;
   margin-right: 20px;
  }
 
  #four {
-  background-image: url("/UI/foods5.jpg");
+  background-image: url("/Front-end/foods5.jpg");
   background-size: cover;
  }
 
@@ -646,50 +646,56 @@ img {
 
 /* For the customer homepage */
 
-/* Create two unequal columns that floats next to each other */
-.column {
-  float: left;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+.newcontent {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
 }
 
-.left {
-  width: 75%;
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
 }
 
-.right {
-  width: 25%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 @media screen and (max-width: 600px) {
-  .column {
+  .wrapper {
     width: 100%;
   }
 }
 
+.right {
+  width: 30%;
+  padding: 0 16px;
+}
 
-/* Product cards */
-
-.cards-contsiner {
-  justify-content: center;
-  margin: auto;
-  display: flex;
+.contain {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
 }
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 33%;
   text-align: center;
   font-family: arial;
-  display: inline-block;
-  margin-right: 20px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
 }
 
 .price {
@@ -711,4 +717,81 @@ img {
 
 .card button:hover {
   opacity: 0.7;
+}
+
+.count {
+  width: 30px;
+}
+
+@media (max-width: 800px){
+  .right {
+    width: 100%;
+  }
+}
+
+span.spanprice {
+  float: right;
+  color: grey;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
+}
+
+
+
+.recs {
+  display: grid;
+  grid-gap: 10px;
+  margin-bottom: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.wrap {
+  display: flex;
+  flex: 100%;
+  flex-wrap: wrap;
+}
+
+
+.rec {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e8e9eb;
+  height: 150px;
+  border-radius: 2%;
+}
+
+.label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  margin-top: 0.1rem;
+}
+
+.chef-container {
+  margin: 10px 20px 0px 20px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+.addMeal {
+  margin: auto;
+  display: block;
+  width: 50%;
 }

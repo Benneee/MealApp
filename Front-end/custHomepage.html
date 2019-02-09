@@ -5,81 +5,222 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Checkout Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="/UI/index.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/Front-end/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
             <div class="topnav" id="myTopnav">
-                    <a href="/UI/index.html" class="active">Book-A-Meal</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#about">About</a>
+                    <a href="/Front-end/index.html" class="active">Book-A-Meal</a>
+                    <a href="#contact">Favorites</a>
+                    <a href="#about">Order History</a>
                     <a href="#profile" id="profile">Welcome Benedict</a>
                     <a href="javascript:void(0);" class="icon" onclick="loadMenu()">
                       <i class="fa fa-bars"></i>
                     </a>
             </div>
-   
-<div class="row">
-        <div class="column left">
-            <div class="cards-contsiner">
-            <div class="card">
-                    <img src="/UI/foods6.jpg" class="i" alt="Coconut rice" style="width:100%">
-                    <h1>Coconut rice</h1>
-                    <p class="price">#900.00</p>
-                    <p>Garnished coconut rice</p>
-                    <a>
-                        <i class="fa fa-shopping-cart"></i>
-                    </a>
-                    <a>
-                        <i class="fa fa-heart"></i>
-                    </a>
-                    <a>
-                        <i class="fa fa-sort"></i>
-                    </a>
-                </div>
 
-              
-                <div class="card">
-                    <img src="/UI/foods4.jpg" alt="Jollof Rice" style="width:100%">
-                    <h1>Jollof Rice</h1>
-                    <p class="price">#600.00</p>
-                    <p>Shrimp with Jollof Rice</p>
-                    <a>
-                        <i class="fa fa-shopping-cart"></i>
-                    </a>
-                    <a>
-                        <i class="fa fa-heart"></i>
-                    </a>
-                    <a>
-                        <i class="fa fa-sort"></i>
-                    </a>
-                </div>
+            <div>
+                <h3>
+                    Welcome back Benedict, we have been expecting you!
+                </h3>
+            </div>
 
+            <div>
+                <h3>
+                    Today's Menu
+                </h3>
+            </div>
+
+            <div class="newcontent">
+            <div class="wrapper">
                     <div class="card">
-                            <img src="/UI/foods3.jpg" alt="Golden dodo" style="width:100%">
-                            <h1>Golden dodo</h1>
-                            <p class="price">#600.00</p>
-                            <p>Beef with Dodo</p>
+                            <img src="/Front-end/foods6.jpg" class="i" alt="Coconut rice" style="width:100%">
+                            <h1>Coconut rice</h1>
+                            <p class="price">#900.00</p>
+                            <p>Garnished coconut rice</p>
                             <a>
                                 <i class="fa fa-shopping-cart"></i>
                             </a>
                             <a>
                                 <i class="fa fa-heart"></i>
                             </a>
-                            <input type="number">
+                            <a>
+                                <input class="count" value="1" type="number">
+                             </a>
+                   
+                            <a href="#">
+                                <i class="fa fa-times"></i>
+                            </a>       
+                          </div>
+        
+                      
+                        <div class="card">
+                            <img src="/Front-end/foods4.jpg" alt="Jollof Rice" style="width:100%">
+                            <h1>Jollof Rice</h1>
+                            <p class="price">#600.00</p>
+                            <p>Shrimp with Jollof Rice</p>
+                            <a>
+                                <i class="fa fa-shopping-cart"></i>
+                            </a>
+                            <a>
+                                <i class="fa fa-heart"></i>
+                            </a>
+                            <a>
+                                <input class="count" value="1" type="number">
+                            </a>
+                    
+                            <a href="#">
+                                <i class="fa fa-times"></i>
+                            </a>    
                         </div>
+        
+                            <div class="card">
+                                    <img src="/Front-end/foods3.jpg" alt="Golden dodo" style="width:100%">
+                                    <h1>Plantain</h1>
+                                    <p class="price">#600.00</p>
+                                    <p>Plantain Porridge</p>
+                                    <a>
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </a>
+                                    <a>
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                    <a>
+                                    <input class="count" value="1" type="number">
+                                    </a>
+                                        
+                                        <a href="#">
+                                            <i class="fa fa-times"></i>
+                                        </a>                   
+                                     </div>
+
+                                <div class="card">
+                                    <img src="/Front-end/foods8.jpg" class="i" alt="Coconut rice" style="width:100%">
+                                    <h1>Salad</h1>
+                                    <p class="price">#900.00</p>
+                                    <p>Plantain Salad</p>
+                                    <a>
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </a>
+                                    <a>
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                    <a>
+                                        <input class="count" value="1" type="number">
+                                     </a>
+           
+                                    <a href="#">
+                                        <i class="fa fa-times"></i>
+                                    </a>                        
+                                 </div>
+                
+                              
+                                <div class="card">
+                                    <img src="/Front-end/foods9.jpg" alt="Jollof Rice" style="width:100%">
+                                    <h1>Spaghetti</h1>
+                                    <p class="price">#600.00</p>
+                                    <p>Spaghetti with eggs</p>
+                                    <a>
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </a>
+                                    <a>
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                    <a>
+                                        <input class="count" value="1" type="number">
+                                    </a>
+            
+                                    <a href="#">
+                                        <i class="fa fa-times"></i>
+                                    </a>                    
+                                </div>
+                
+                                    <div class="card">
+                                            <img src="/Front-end/foods10.jpg" alt="Golden dodo" style="width:100%">
+                                            <h1>Macaroni</h1>
+                                            <p class="price">#600.00</p>
+                                            <p>Beef with Macaroni</p>
+                                            <a>
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </a>
+                                            <a>
+                                                <i class="fa fa-heart"></i>
+                                            </a>
+                                            <a>
+                                            <input class="count" value="1" type="number">
+                                            </a>
+    
+                                            <a href="#">
+                                                <i class="fa fa-times"></i>
+                                            </a>                                   
+                                         </div>
                         
-                    </div>
-        </div>
-        <div class="column right">
-          <h2>Your Orders</h2>
-          <p>Some text..</p>
-        </div>
-      </div>
+                            </div>
+                                                    
+                                 <div class="right">
+                                        <div class="contain">
+                                          <h4>Cart 
+                                            <span class="spanprice" style="color:black">
+                                              <i class="fa fa-shopping-cart"></i> 
+                                              <b>4</b>
+                                            </span>
+                                          </h4>
+                                          <p>
+                                              <a href="#">Coconut rice</a> 
+                                              <a>
+                                                    <input class="count" value="1" type="number">
+                                                 </a>
+                                                 <a href="#">
+                                                     <i class="fa fa-times"></i>
+                                                 </a>
+                                              <span class="spanprice">#900</span>
+                                        </p>
+                                        
+                                          <p>
+                                              <a href="#">Macaroni</a>
+                                              <a>
+                                                    <input class="count" value="1" type="number">
+                                                 </a>
+                                                 <a href="#">
+                                                     <i class="fa fa-times"></i>
+                                                 </a>
+                                                  <span class="spanprice">#600</span>
+                                            </p>
+
+                                          <p>
+                                              <a href="#">Spaghetti</a>
+                                              <a>
+                                                    <input class="count" value="1" type="number">
+                                                 </a>
+                                                 <a href="#">
+                                                     <i class="fa fa-times"></i>
+                                                 </a>
+                                               <span class="spanprice">#600</span
+                                                ></p>
+                                                
+                                          <p>
+                                              <a href="#">Beans and Plantain</a>
+                                              <a>
+                                                    <input class="count" value="1" type="number">
+                                                 </a>
+                                                 <a href="#">
+                                                     <i class="fa fa-times"></i>
+                                                 </a>
+                                              <span class="spanprice">#600</span></p>
+                                          <hr>
+                                          <p>Total <span class="spanprice" style="color:black"><b>#2700</b></span></p>
+                                        </div>
+                                        <div>
+                                            <button class="btn">Proceed To Payment</button>
+                                        </div>
+                                </div>
+                        </div>
+            
+            
 
     
 
-      <script src="/UI/index.js"></script>
+      <script src="/Front-end/index.js"></script>
 </body>
 </html>
