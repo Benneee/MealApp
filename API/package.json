@@ -1,0 +1,15 @@
+{
+  "name": "meal_booking_app",
+  "version": "1.0.0",
+  "description": "An app to help book meals",
+  "main": "index.js",
+  "git repository": "https://github.com/benneee/MealBookingApp",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "benedict nkeonye",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

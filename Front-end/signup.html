@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Create Account</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container-wide">
+        <main>
+
+                <div class="topnav" id="myTopnav">
+                        <a href="/UI/index.html" class="active">Book-A-Meal</a>
+                        <a href="/UI/signin.html">Sign in</a>
+                        <a href="#contact">Contact</a>
+                        <a href="#about">About</a>
+                        <a href="javascript:void(0);" class="icon" onclick="loadMenu()">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                      </div>
+ 
+            <div>
+                <h2 class="comment">Create a free account</h2>
+            </div>
+
+            <br><br>
+
+            <div class="content">
+                <form action="">
+                    <div class="input-group">
+                        <label for="fullname">Full name
+                        <input type="text" name="fullname" required>
+                    </label><br>
+                    </div>
+
+                    <br><br>
+
+                    <div class="input-group">
+                        <label for="email"> Email address
+                        <input type="text" name="email" required email>
+                    </label><br>
+                    </div>
+
+                    <br><br>
+                        
+                    <div class="input-group">
+                        <label for="password">Password
+                        <input type="text" name="password" required>
+                    </label><br>
+                    </div>
+
+                    <br><br>
+                    <p>
+                        Are you a Caterer? <br/>
+                        <label>
+                            <input 
+                            type="checkbox" 
+                            name="jobtype" 
+                            id="yesCheck" 
+                            onclick="showFields()"
+                            value="yes">
+                            Yes
+                        </label>
+                
+                        <label>
+                            <input 
+                            type="checkbox" 
+                            name="jobtype" 
+                            id="noCheck" 
+                            onclick="showFields()"
+                            value="no">
+                            No
+                        </label>
+                    </p>
+                    
+                    <div id="hidden">
+
+                        <div class="input-group">
+                            <label for="fullname">Business name</label><br>
+                            <input type="text" name="fullname" required>
+                        </div>
+                       
+                        <br><br>
+    
+                        <div class="input-group">
+                            <label for="fullname">Business address</label><br>
+                            <input type="text" name="fullname" required>
+                        </div>
+
+
+                    </div>
+
+                    <br><br>
+
+
+                    <div class="input-group">   
+                        <input type="submit" value="Create Account">
+                    </div>
+
+                    <br><br>
+                    
+                    <p class="text-center">Already have an account? <a href="/UI/signin.html">Sign in</a></p>
+
+                </form>
+            </div>
+        </main>
+
+    </div>
+
+    
+    <script src="/UI/index.js"></script>
+
+  </body>  
+  <div class="footer">
+    <footer>
+      <p >Book-A-Meal &copy 2019</p>
+    </footer>
+  </div>
+
+  
+</html>
