@@ -1,7 +1,20 @@
 <!DOCTYPE html> 
 <html> 
+<head>
 
+    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
 <style> 
+
+html {
+  font-family: 'Ropa Sans', sans-serif;
+  font-size: 1.5em;
+  scroll-behavior: smooth;
+  font-weight: 200;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Ropa Sans', sans-serif;
+}
 
 table {
   border-collapse: collapse;
@@ -164,13 +177,20 @@ a.active {
     text-align: left;
   }
 }
+
+#body{
+  background: lightgrey;
+  background-size: contain;
+}
 </style> 
-<body> 
+</head>
+
+<body id="body"> 
         <div class="topnav" id="myTopnav">
                 <a href="/Front-end/index.html" class="active">Book-A-Meal</a>
                 <a href="#contact">Favorites</a>
                 <a href="#about">Order History</a>
-                <a href="#profile" id="profile">Welcome Chef</a>
+                <a href="/Front-end/chefHomepage.html" id="profile">Welcome Chef</a>
                 <a href="javascript:void(0);" class="icon" onclick="loadMenu()">
                   <i class="fa fa-bars"></i>
                 </a>
@@ -201,7 +221,7 @@ a.active {
   
       <div class="clearfix"> 
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> 
-        <button type="submit" class="signupbtn">Sign Up</button> 
+        <button type="submit" class="signupbtn">Add Menu</button> 
       </div> 
     </div> 
   </form> 

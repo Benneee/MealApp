@@ -402,10 +402,14 @@ a.dropdown-item {
 }
 
 html {
-  font-family: 'helvetica neue', sans-serif;
-  font-size: 20px;
+  font-family: 'Ropa Sans', sans-serif;
+  font-size: 1.5em;
   scroll-behavior: smooth;
   font-weight: 200;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Ropa Sans', sans-serif;
 }
  
 
@@ -814,4 +818,14 @@ tr:nth-child(even){background-color: #f2f2f2}
   background: url("/Front-end/bg5.jpg");
   background-size: cover;
   width: 100%;
+}
+
+#body2 {
+  background: url("/Front-end/chefbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#welcome {
+  margin-left: 20px;
 }
