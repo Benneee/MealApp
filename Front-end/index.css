@@ -533,7 +533,7 @@ a.active {
   }
 
   .food-description {
-    padding: 40px;
+    padding: 20px;
     position: absolute;
     bottom: 0;
     background: #fff;
@@ -560,23 +560,27 @@ a.active {
  #one {
    background-image: url("/Front-end/foods2.jpg");
    background-size: cover;
-   margin-right: 20px;
+   margin-right: 40px;
+   margin-bottom: 40px;
  }
 
  #two {
   background-image: url("/Front-end/foods3.jpg");
   background-size: cover;
+  margin-bottom: 40px;
  }
 
  #three {
   background-image: url("/Front-end/foods4.jpg");
   background-size: cover;
-  margin-right: 20px;
+  margin-right: 40px;
+  margin-bottom: 40px;
  }
 
  #four {
   background-image: url("/Front-end/foods5.jpg");
   background-size: cover;
+  margin-bottom: 40px;
  }
 
  @media screen and (max-width: 600px) {
@@ -794,4 +798,20 @@ tr:nth-child(even){background-color: #f2f2f2}
   margin: auto;
   display: block;
   width: 50%;
+}
+
+#bg {
+  background: url("/Front-end/bg.jpg");
+  background-size: cover;
+}
+
+.parent {
+  width: 1200px;
+  margin: auto;
+}
+
+#body{
+  background: url("/Front-end/bg5.jpg");
+  background-size: cover;
+  width: 100%;
 }
