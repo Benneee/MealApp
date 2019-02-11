@@ -562,27 +562,27 @@ a.active {
   }
 
  #one {
-   background-image: url("/Front-end/foods2.jpg");
+   background-image: url("foods2.jpg");
    background-size: cover;
    margin-right: 40px;
    margin-bottom: 40px;
  }
 
  #two {
-  background-image: url("/Front-end/foods3.jpg");
+  background-image: url("foods3.jpg");
   background-size: cover;
   margin-bottom: 40px;
  }
 
  #three {
-  background-image: url("/Front-end/foods4.jpg");
+  background-image: url("foods4.jpg");
   background-size: cover;
   margin-right: 40px;
   margin-bottom: 40px;
  }
 
  #four {
-  background-image: url("/Front-end/foods5.jpg");
+  background-image: url("foods5.jpg");
   background-size: cover;
   margin-bottom: 40px;
  }
@@ -805,7 +805,7 @@ tr:nth-child(even){background-color: #f2f2f2}
 }
 
 #bg {
-  background: url("/Front-end/bg.jpg");
+  background: url("bg.jpg");
   background-size: cover;
 }
 
@@ -815,13 +815,13 @@ tr:nth-child(even){background-color: #f2f2f2}
 }
 
 #body{
-  background: url("/Front-end/bg5.jpg");
+  background: url("bg5.jpg");
   background-size: cover;
   width: 100%;
 }
 
 #body2 {
-  background: url("/Front-end/chefbg.jpg");
+  background: url("chefbg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
