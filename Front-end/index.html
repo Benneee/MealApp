@@ -2,10 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-ev="X-UA-Compatible" content="IE=edge">
     <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -13,7 +14,7 @@
 <body>
 
         <!-- <div class="container-wide"> -->
-          <!-- <img id="cover" src="/UI/foods1.jpg" alt="Fried rice & dodo">
+          <!-- <img id="cover" src="/foods1.jpg" alt="Fried rice & dodo">
             <div class="h1content">
               <h1>Hungry?</h1>
               <p>Book-A-Meal, We've got you covered!</p>
@@ -22,7 +23,7 @@
 
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade container-wide">
-                <img src="/UI/foods1.jpg" id="cover" style="width: 100%;">
+                <img src="/Front-end/foods1.jpg" id="cover" style="width: 100%;">
                 <div class="h1content">
                     <h1>Hungry?</h1>
                     <p>Book-A-Meal, We've got you covered!</p>
@@ -30,7 +31,7 @@
               </div>
             
               <div class="mySlides fade container-wide">
-                <img src="/UI/foods5.jpg" id="cover" style="width: 100%;">
+                <img src="/Front-end/foods5.jpg" id="cover" style="width: 100%;">
                 <div class="h1content">
                     <h1>Hungry?</h1>
                     <p>Book-A-Meal, We've got you covered!</p>
@@ -38,7 +39,7 @@
               </div>
             
               <div class="mySlides fade container-wide">
-                <img src="/UI/foods4.jpg" id="cover" style="width: 100%;">
+                <img src="/Front-end/foods4.jpg" id="cover" style="width: 100%;">
                 <div class="h1content">
                     <h1>Hungry?</h1>
                     <p>Book-A-Meal, We've got you covered!</p>
@@ -49,17 +50,19 @@
        <!-- </div> -->
 
               <div class="topnav" id="myTopnav">
-                <a href="/UI/index.html" class="active">Book-A-Meal</a>
-                <a href="/UI/signup.html">Register</a>
-                <a href="/UI/signin.html">Sign in</a>
+                <a href="/Front-end/index.html" class="active">Book-A-Meal</a>
+                <a href="/Front-end/signup.html">Register</a>
+                <a href="/Front-end/signin.html">Sign in</a>
+                <a href="/Front-end/chefHomepage.html">Welcome Chef!</a>
+                <a href="/Front-end/custHomepage.html">Welcome Benedict!</a>
                 <a href="#about">About</a>
                 <a href="javascript:void(0);" class="icon" onclick="loadMenu()">
                   <i class="fa fa-bars"></i>
                 </a>
               </div>
 
-                      <h2>Today's Menu</h2>
-                      <hr>
+              <div id="body">
+                      <h2 style="color: lightsalmon;">Today's Menu</h2>
 
 
                       <div class="parent">
@@ -68,16 +71,16 @@
                           <div class="container">
                             <div class="single-food-card flex-items" id="one">
                                 <div class="food-description">
-                                  <h3>Food name</h3>
+                                  <h3>Ofada Rice with Beef</h3>
                                   <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quia ipsum deleniti officiis architecto recusandae.                           
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores a ipsum deleniti officiis architecto recusandae.                           
                                   </p>
                                 </div>
                               </div>
         
                               <div class="single-food-card flex-items" id="two">
                                   <div class="food-description">
-                                    <h3>Food name</h3>
+                                    <h3>Yam Porridge with Vegetable</h3>
                                     <p>
                                         Quaerat veniam, repellendus magnam impedit dolorum ab omnis accusamus ut optio aliquam voluptatibus maxime pariatur.
                                     </p>
@@ -86,7 +89,7 @@
         
                                 <div class="single-food-card flex-items" id="three">
                                   <div class="food-description">
-                                    <h3>Food name</h3>
+                                    <h3>Shrimp with Jollof Rice</h3>
                                     <p>
                                         Quaerat veniam, repellendus magnam impedit dolorum ab omnis accusamus ut optio aliquam voluptatibus maxime pariatur..
                                     </p>
@@ -96,7 +99,7 @@
         
                                 <div class="single-food-card flex-items" id="four">
                                   <div class="food-description">
-                                    <h3>Food name</h3>
+                                    <h3>Seafood Yam Porridge</h3>
                                     <p>
                                         Quaerat veniam, repellendus magnam impedit dolorum ab omnis accusamus ut optio aliquam voluptatibus maxime pariatur.
                                   </p>
@@ -108,12 +111,12 @@
                             <div class="clear"></div>
                           </div>
 
-                          
+                  </div>        
 
         </div>
 
 
-<script src="/UI/index.js"></script>
+<script src="/Front-end/index.js"></script>
 
 </body>
 

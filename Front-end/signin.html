@@ -6,16 +6,17 @@
     <title>Create Account</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-<body>
+<body id="bg">
     <div class="container-fluid">
         <main>
               
                 <div class="topnav" id="myTopnav">
-                        <a href="/UI/index.html" class="active">Book-A-Meal</a>
-                        <a href="/UI/signup.html">Register</a>
+                        <a href="/Front-end/index.html" class="active">Book-A-Meal</a>
+                        <a href="/Front-end/signup.html">Register</a>
                         <a href="#contact">Contact</a>
                         <a href="#about">About</a>
                         <a href="javascript:void(0);" class="icon" onclick="loadMenu()">
@@ -41,7 +42,7 @@
                         
                     <div class="input-group">
                         <label for="password">Password</label><br>
-                        <input type="text" name="password" required>
+                        <input type="password" name="password" required>
                     </div>
 
                     <br><br>
@@ -72,8 +73,9 @@
                     <div class="input-group">   
 
                             <br><br>
-
-                        <input type="submit" value="Sign in">
+                        <a href="/Front-end/custHomepage.html">
+                        <input type="submit"  value="Sign in">
+                    </a>
                     </div>
 
                     <br><br>
@@ -81,14 +83,14 @@
                  
 
                     
-                    <p class="text-center">Don't have an account? <a href="/UI/signup.html">Register now</a></p>
+                    <p class="text-center">Don't have an account? <a href="/Front-end/signup.html">Register now</a></p>
 
                 </form>
             </div>
         </main>
 
     </div>
-    <script src="/UI/index.js"></script>
+    <script src="/Front-end/index.js"></script>
     </body>
     <div class="footer">
         <footer>
