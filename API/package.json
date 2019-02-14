@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "An app to help book meals",
   "main": "index.js",
-  "git repository": "https://github.com/benneee/MealBookingApp",
+  "git repository": "https://github.com/benneee/MealApp",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node src/index.js",
+    "build": "babel --presets env -d lib/ src"
   },
+  "keywords": [],
   "author": "benedict nkeonye",
   "license": "ISC",
   "dependencies": {
@@ -14,6 +17,10 @@
     "sequelize": "^4.42.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-cli": "^6.26.0",
     "eslint": "^5.13.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
