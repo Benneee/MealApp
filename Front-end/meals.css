@@ -120,9 +120,9 @@ html {
   }
   
   #body{
-    background: lightgrey;
+    background: white;
     background-size: contain;
-  } */
+  } 
     
 input[type=text], input[type=password] { 
     width: 100%; 
@@ -214,3 +214,22 @@ button {
     width: 100%;
 }
 
+.mealPic{
+  border-radius: 50%;
+  max-width: 90%;
+}
+
+.openModal {
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px rgb(0, 255, 81);
+  width: 60%; 
+  display: block; 
+  margin: auto;
+}
+
+.openModal:active {
+  background-color: 5px 10px rgb(0, 255, 81) ;
+  box-shadow: inherit;
+  transform: translateY(2px);
+}
