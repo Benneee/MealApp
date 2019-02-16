@@ -45,7 +45,7 @@ const MealService = {
             id = checkId,
             name: meal.name,
             size: meal.size,
-            price: meal.pricee
+            price: meal.price
         };
         mealDummyData.meals = [...newMealList, editedMeal];
         return {
