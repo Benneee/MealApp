@@ -3,7 +3,7 @@ import menuDummyData from "../utils/menuDummyData"
 const MenuService = {
     addMenu(menu) {
         const newMenu = menu;
-        menuDummyData.menu = newMenu;
+        menuDummyData.menu.push(newMenu);
         return newMenu;
     },
 
