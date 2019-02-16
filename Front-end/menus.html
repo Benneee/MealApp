@@ -1,0 +1,108 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <link rel="stylesheet" type="text/css" href="menus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+</head>
+
+<body id="body"> 
+        <div class="topnav" id="myTopnav">
+                <a href="index.html" class="active">Book-A-Meal</a>
+                <a href="#contact">Favorites</a>
+                <a href="#about">Order History</a>
+                <a href="chefHomepage.html" id="profile">Welcome Chef</a>
+                <a href="javascript:void(0);" class="icon" onclick="loadMenu()">
+                  <i class="fa fa-bars"></i>
+                </a>
+        </div>
+
+        <br><br>
+  
+  
+<button onclick="document.getElementById('id01').style.display='block'"  class="openModal">Add A Menu</button> 
+
+<br><br>
+  
+<div id="id01" class="modal"> 
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span> 
+  <form class="modal-content animate"> 
+    <div class="container"> 
+      <label><b>Menu Name</b></label> 
+      <input type="text" placeholder="Enter Menu" required> 
+  
+      <label><b>Menu Description</b></label> 
+      <input type="password" placeholder="Enter Menu Description" name="psw" required>
+      
+      <label for="date">Set Date</label>
+      <input type="date">
+        
+      <label><b>Upload Meal Image</b></label>
+      <input type="file" accept="image/*">
+  
+      <div class="clearfix"> 
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> 
+        <button type="submit" class="signupbtn">Add Menu</button> 
+      </div> 
+    </div> 
+  </form> 
+</div> 
+
+
+<section>
+        <div style="overflow-x:auto;">
+                <table>
+                  <tr>
+                    <th>Menu Name</th>
+                    <th>Menu Description</th>
+                    <th>Ingredients</th>
+      
+                  </tr>
+                  <tr>
+                    <td>Spaghetti Feast</td>
+                    <td>A display of varieties of Spaghetti meals</td>
+                    <td>Beef, Spaghetti and other essential ingredients</td>
+               
+                  </tr>
+                  <tr>
+                    <td>Rice Specials</td>
+                    <td>A display of varieties of Rice meals</td>
+                    <td>Rice, Plantain, Beef and other essential ingredients</td>
+                  
+                  </tr>
+                  <tr>
+                    <td>Plantain Parade</td>
+                    <td>A display of varieties of Plantain meals</td>
+                    <td>Plantain and other essential ingredients</td>
+              
+                  </tr>
+                </table>
+            </div>
+</section>
+  
+<script> 
+  
+var modal = document.getElementById('id01'); 
+  
+  
+window.onclick = function(event) { 
+    if (event.target == modal) { 
+        modal.style.display = "none"; 
+    } 
+} 
+
+function loadMenu() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script> 
+   <script src="../Front-end/index.js"></script>
+
+</body> 
+</html>
