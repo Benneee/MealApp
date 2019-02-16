@@ -210,6 +210,15 @@ a.active {
   }
 
   @media(max-width: 768px) {
+    .container {
+      display: grid;
+      grid-gap: 1em;
+      grid-template-columns: 1fr;
+      width: 100%;
+      justify-content: center;
+  }
+
+  }
     @media(max-width: 800px) {
       .container {
         display: grid;
@@ -444,13 +453,13 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 .rec {
-  display: block;
+  display: grid;
   align-items: center;
   justify-content: center;
   border: 1px solid #e8e9eb;
   height: 150px;
   border-radius: 2%;
-  grid-template-columns: repeat(4, 100px);
+  /* grid-template-columns: repeat(4, 100px); */
 }
 
 @media(max-width: 1100)  {
@@ -520,7 +529,7 @@ tr:nth-child(even){background-color: #f2f2f2}
 }
 
 #body2 {
-  background: url("../Front-end/images/chefbg.jpg");
+  background: white;
   background-repeat: no-repeat;
   background-size: cover;
 }
