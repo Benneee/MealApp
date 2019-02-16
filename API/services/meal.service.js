@@ -5,11 +5,10 @@ const MealService = {
     fetchAllMeals() {
         const validMeals = mealDummyData.meals.map((meal)=>{
             const newMeal = new Meal();
-            newMeal.id = meal.id;
-            newMeal.name = meal.name;
-            newMeal.size = meal.size;
-            newMeal.price = meal.price;
-            return newMeal;
+            newMeal.id = Meal.id;
+            newMeal.name = Meal.name;
+            newMeal.size = Meal.size;
+            newMeal.price = Meal.price;
         });
         return validMeals;
     },
@@ -17,10 +16,10 @@ const MealService = {
     addMeal(meal) {
         const mealLength = mealDummyData.meals.length;
         const lastId = mealDummyData.meals[mealLength - 1].id;
-        const newId = lastId + 1;
+        const mealId = lastId + 1;
         meal.id = newId;
-        mealDummyData.meals.push(meal);
-        console.log(meal);
+
+        mealDummyData.meals.push(meal)
         return meal;
     },
 
@@ -43,10 +42,10 @@ const MealService = {
         const newMealList = mealDummyData.meals.filter(meal => meal.id !== checkId);
         const idAvailable = (mealDummyData.meals.length !== newMealList.length);
         const editedMeal = {
-            id : checkId,
+            id = checkId,
             name: meal.name,
             size: meal.size,
-            price: meal.price,
+            price: meal.pricee
         };
         mealDummyData.meals = [...newMealList, editedMeal];
         return {
