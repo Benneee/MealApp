@@ -13,7 +13,7 @@ const OrderController =  {
         /*
             Expect JSON of the following format
             {
-                meal_order: "meal: order",
+                meal_order: "meal_order",
                 customer_name: "customer_name",
                 customer_id: "customer_id",
                 customer_address: "customer_address",
@@ -31,10 +31,10 @@ const OrderController =  {
     },
 
     editOrder(req, res) {
-               /*
+        /*
             Expect JSON of the following format
             {
-                meal_order: "meal: order",
+                meal_order: "meal_order",
                 customer_name: "customer_name",
                 customer_id: "customer_id",
                 customer_address: "customer_address",
@@ -69,3 +69,5 @@ const OrderController =  {
         }).status(status);
     }
 }
+
+export default OrderController;
