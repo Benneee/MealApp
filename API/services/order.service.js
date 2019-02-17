@@ -10,20 +10,16 @@ const OrderService = {
             newOrder.customer_name = order.customer_name;
             newOrder.customer_id = order.customer_id;
             newOrder.customer_address = order.customer_address;
-            newOrder.customer_phone_num = order.customer_phone_number;
-            newOrder.purchase_toal = order.purchase_total;
+            newOrder.customer_phone_number = order.customer_phone_number;
+            newOrder.purchase_total = order.purchase_total;
             return newOrder
         });
         return validOrders;
     },
 
-    // getAllOrders(){
-    //     return this.fetchAllOrders();
-    // },
-
     addOrder(order) {
-        const orderLength = orderDummyData.meals.length;
-        const lastOrderId = orderDummyData.orders[orderLegngth - 1].id;
+        const orderLength = orderDummyData.orders.length;
+        const lastOrderId = orderDummyData.orders[orderLength - 1].id;
         const newOrderId = lastOrderId + 1;
         order.id = newOrderId;
         orderDummyData.orders.push(order);
@@ -32,15 +28,16 @@ const OrderService = {
 
     editAnOrder(id, order) {
         const checkOrderId = parseInt(id, Number);
-        const newOrderList = orderDummyData.orders.filter(order => order.id !== checkId);
-        const orderIdAvailable = (orderDummyData.orders.length !== newOrderList.list);
+        const newOrderList = orderDummyData.orders.filter(order => order.id !== checkOrderId);
+        const orderIdAvailable = (orderDummyData.orders.length !== newOrderList.length);
         const editedOrder = {
             id: checkOrderId,           
             meal_order: order.meal_order,
             customer_name: order.customer_name,
             customer_id: order.customer_id,
             customer_address: order.customer_address,
-            customer_phone_number: order.customer_phone_number
+            customer_phone_number: order.customer_phone_number,
+            purchase_total: order.purchase_total,
         };
         orderDummyData.orders.push(editedOrder);
         return {
