@@ -20,7 +20,6 @@ const MealService = {
         const newId = lastId + 1;
         meal.id = newId;
         mealDummyData.meals.push(meal);
-        console.log(meal);
         return meal;
     },
 
@@ -48,7 +47,7 @@ const MealService = {
             size: meal.size,
             price: meal.price,
         };
-        mealDummyData.meals = [...newMealList, editedMeal];
+        mealDummyData.meals.push(editedMeal);
         return {
             editedMeal,
             idAvailable,

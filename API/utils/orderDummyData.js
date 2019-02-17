@@ -18,8 +18,8 @@ export default {
             ] ,
             customer_name: "Tola Titi",
             customer_id: 1, 
-            address: "5 address street, place",
-            phone_number: "08096785678",
+            customer_address: "5 address street, place",
+            cusomer_phone_number: "08096785678",
             purchase_total: "1300"
         },
         {
@@ -40,8 +40,8 @@ export default {
             ] ,
             customer_name: "Titi Tolu",
             customer_id: 1, 
-            address: "5 address street, place",
-            phone_number: "08096785678",
+            customer_address: "5 address street, place",
+            customer_phone_number: "08096785678",
             purchase_total: "1300"
         }
     ],
