@@ -14,11 +14,12 @@ const OrderService = {
             newOrder.purchase_toal = order.purchase_total;
             return newOrder
         });
+        return validOrders;
     },
 
-    getAllOrders(){
-        return this.fetchAllOrders();
-    },
+    // getAllOrders(){
+    //     return this.fetchAllOrders();
+    // },
 
     addOrder(order) {
         const orderLength = orderDummyData.meals.length;
