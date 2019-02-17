@@ -2,9 +2,9 @@ import express from "express";
 import bodyParser from "body-parser";
 
 // routes
-import mealRoutes from "../api/routes/meal.route";
-import menuRoutes from "../api/routes/menu.route";
-import orderRoutes from "../api/routes/order.route";
+import mealRoutes from "../src/routes/meal.route";
+import menuRoutes from "../src/routes/menu.route";
+import orderRoutes from "../src/routes/order.route";
 
 
 const app = express();
