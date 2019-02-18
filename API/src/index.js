@@ -17,6 +17,7 @@ app.get('/', (req, res) => {
   return res.send('The API is working!');
 });
 
+module.exports.add = (a, b) => a + b;
 
 // Routes
 app.use('/api/v1/meals', mealRoutes);
