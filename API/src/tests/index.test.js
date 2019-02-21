@@ -1,13 +1,14 @@
-// const expect = require('expect');
+import request from 'supertest';
 
-const index = require('../index');
+import { app } from '../index'
 
-it('should add two numbers', () => {
-    var res = index.add(20, 20);
 
-    // if(res !== 40) {
-    //     throw new Error(`Expected 40, but got ${res}.`)
-    // }
-
-    expect(res).toBe(40);
+describe('API Test', () => {
+    it('should return Holla Benneee! as response', (done) => {
+        request(app)
+            .get('/')
+            .expect(200)
+            .expect('Holla Benneee!')
+            .end(done);
+    });
 });

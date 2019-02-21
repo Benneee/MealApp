@@ -13,11 +13,8 @@ const app = express();
 app.use(bodyParser.json());
 
 
-app.get('/', (req, res) => {
-  return res.send('The API is working!');
-});
+app.get('/', (req, res) => res.send('Holla Benneee!'));
 
-module.exports.add = (a, b) => a + b;
 
 // Routes
 app.use('/api/v1/meals', mealRoutes);
@@ -28,3 +25,6 @@ const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on Port ${PORT}`);
 });
+
+
+module.exports.app = app;
