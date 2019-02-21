@@ -24,10 +24,11 @@ const MenuController = {
 
         const newMenu = req.body;
         const createdMenu = MenuService.addMenu(newMenu);
+        res.status(201);
         return res.json({
             status: "new menu successfully created",
             data: createdMenu
-        }).status(201);
+        });
     }
 }
 

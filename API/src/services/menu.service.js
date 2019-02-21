@@ -2,9 +2,8 @@ import menuDummyData from "../utils/menuDummyData"
 
 const MenuService = {
     addMenu(menu) {
-        const newMenu = menu;
-        menuDummyData.menu.push(newMenu);
-        return newMenu;
+        menuDummyData.menu.push(menu);
+        return menuDummyData.menu;
     },
 
     getMenu() {

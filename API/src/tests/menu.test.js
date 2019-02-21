@@ -1,0 +1,48 @@
+import request from 'supertest';
+
+import expect from 'expect';
+
+import { app } from '../index';
+
+import menu from '../utils/menuDummyData';
+
+
+
+describe('Menu API\'s test', () => {
+    /*
+        test to get all menu items
+        response must be an object
+        response must include the required keys
+    */
+    describe('#GET Menu API test',() => {
+        it('should return all menu items', (done) => {
+            request(app)
+                .get('/api/v1/menu')
+                .expect(200)
+                .expect((res) => {
+                    expect(res.body)
+                    .toBeAn('object');
+                    expect(res.body.data[0])
+                    .toBeAn('object')
+                })
+                .end(done);
+        })
+    });
+
+    describe('#Add Menu API test', () => {
+        it('should create a menu for the day', (done) => {
+            request(app)
+                .post('/api/v1/menu')
+                .send(menu)
+                .expect(201)
+                .expect((res) => {
+                    expect(res.body)
+                    .toBeAn('object');
+                    expect(res.body.data[0])
+                        .toBeAn('object')
+                })
+                .end(done);           
+        })
+    })
+
+});
