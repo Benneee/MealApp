@@ -20,12 +20,16 @@ const MealService = {
         const newId = lastId + 1;
         meal.id = newId;
         mealDummyData.meals.push(meal);
-        return meal;
+        return mealDummyData.meals;
     },
 
     getAMealById(id) {
         const meal = mealDummyData.meals.find(meal => meal.id == id);
-        return meal || {};
+        if (meal) {
+            return meal;
+        } else {
+            return `Meal with id: ${id} does not exist`
+        }
     },
 
     deleteMealById(id) {
@@ -33,8 +37,12 @@ const MealService = {
         const newMealList = mealDummyData.meals.filter(meal => meal.id !== checkId);
         const idAvailable = (mealDummyData.meals.length !== newMealList.length);
         mealDummyData.meals = newMealList;
-
-        return idAvailable;
+        
+        if(id) {
+          return idAvailable;
+        } else {
+           return `Meal with id: ${id} unavailable`;
+        }
     },
 
     editAMeal(id, meal) {
@@ -47,10 +55,12 @@ const MealService = {
             size: meal.size,
             price: meal.price,
         };
-        mealDummyData.meals.push(editedMeal);
+        if (idAvailable) {
+            mealDummyData.meals = [editedMeal, ...newMealList];
+        }
         return {
-            editedMeal,
             idAvailable,
+            editedMeal,
         };
     }
 };

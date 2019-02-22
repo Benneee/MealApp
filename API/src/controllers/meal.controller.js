@@ -22,19 +22,31 @@ const MealController = {
 
         const newMeal = req.body;
         const createdMeal = MealService.addMeal(newMeal);
+        res.status(201);
         return res.json({
             status: "meal successfully added",
             data: createdMeal
-        }).status(201);
+        });
     },
 
     getSingleMeal(req, res) {
         const id = req.params.id;
         const foundMeal = MealService.getAMealById(id);
-        return res.json({
-            status: "success",
-            data: foundMeal
-        }).status(200);
+        let response = {};
+        if (typeof foundMeal === 'object') {
+            res.status(200);
+            response = res.json({
+                status: 'success',
+                data: foundMeal,
+            });
+        } else {
+            res.status(404);
+            response = res.json({
+                status: 'failed',
+                message: `Meal with id: ${id} does not exist`
+            });
+        }
+        return response;
     },
 
     editMeal(req, res) {
@@ -60,7 +72,7 @@ const MealController = {
                 message: `Meal with id: ${id} edited successfully.`,
                 data: result.editedMeal,
             };
-            status = 200;
+            status = 202;
         } else {
             response = {
                 ...response,
@@ -85,7 +97,7 @@ const MealController = {
                 status: 'success',
                 message: `Meal with id: ${id} deleted successfully`,
             };
-            status = 200;
+            status = 202;
         } else {
             response = {
                 ...response,
