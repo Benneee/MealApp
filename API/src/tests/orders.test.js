@@ -4,8 +4,6 @@ import expect from 'expect';
 
 import { app } from '../index';
 
-import meal from '../utils/mealDummyData';
-
 import orders from '../utils/orderDummyData';
 
 
