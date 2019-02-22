@@ -4,8 +4,9 @@ node_js:
 before_install:
   - cd api
   - npm install
+  - chmod 0755 node_modules/.bin/mocha
 script:
-  - npm test
+  - npm run test
 cache:
   directories:
-    - "api/node_modules"
+    - "Api/node_modules"
