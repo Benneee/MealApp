@@ -1,11 +1,11 @@
 language: node_js
 node_js:
   - "stable"
-bwfore_install:
+before_install:
   - cd api
   - npm install
 cache:
   directories:
     - "api/node_modules"
 script:
-  - npm test
+  - npm run test
