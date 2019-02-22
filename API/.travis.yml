@@ -4,4 +4,4 @@ node_js:
 
 cache:
   directories:
-    - "/api/node_modules"
+    - "api/node_modules"
