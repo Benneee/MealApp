@@ -4,8 +4,8 @@ node_js:
 before_install:
   - cd api
   - npm install
+script:
+  - npm run test
 cache:
   directories:
     - "api/node_modules"
-script:
-  - npm run test
