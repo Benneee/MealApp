@@ -8,4 +8,4 @@ cache:
   directories:
     - "api/node_modules"
 script:
-  - npm run test
+  - npm test
