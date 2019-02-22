@@ -6,6 +6,7 @@
   "git repository": "https://github.com/benneee/MealApp",
   "scripts": {
     "test": "mocha src/tests/*.test.js --recursive --require @babel/register --timeout 10000 --exit",
+    "test:travis": "mocha **/*.spec.js --require @babel/register --exit",
     "test-watch": "nodemon --exec \"npm test\"",
     "start": "nodemon --exec babel-node src/index",
     "build": "babel --presets env -d lib/ src"
