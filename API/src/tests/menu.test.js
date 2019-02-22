@@ -12,9 +12,9 @@ describe('Menu API\'s test', () => {
     /*
         test to get all menu items
         response must be an object
-        response must include the required keys
+        created menu must also be an object
     */
-    describe('#GET Menu API test',() => {
+    describe('#GET, fetch menu API test',() => {
         it('should return all menu items', (done) => {
             request(app)
                 .get('/api/v1/menu')
@@ -29,7 +29,7 @@ describe('Menu API\'s test', () => {
         })
     });
 
-    describe('#Add Menu API test', () => {
+    describe('#POST, add Menu API test', () => {
         it('should create a menu for the day', (done) => {
             request(app)
                 .post('/api/v1/menu')
