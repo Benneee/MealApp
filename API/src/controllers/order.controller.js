@@ -24,10 +24,11 @@ const OrderController =  {
         */
         const newOrder = req.body;
         const createdOrder = OrderService.addOrder(newOrder);
+        res.status(201);
         return res.json({
             status: "success",
             data: createdOrder
-        }).status(201);     
+        })     
     },
 
     editOrder(req, res) {
@@ -48,25 +49,26 @@ const OrderController =  {
         const entry = req.body;
         const result = OrderService.editAnOrder(id, entry);
         let response = {};
+        let status = 0;
         if (result.orderIdAvailable) {
             response = {
                 ...response,
                 status: 'success',
-                message: `Order with ${id} edited successfully.`,
+                message: `Order with id: ${id} edited successfully.`,
                 data: result.editedOrder,
             };
-            status = 200;
+            status = 202;
         } else {
             response = {
                 ...response,
                 status: 'error',
-                message: `Order with ${id} not found`,
+                message: `Order with id: ${id} not found`,
             };
             status = 404;
         }
-        return res.json({
+        return res.status(status).json({
             response
-        }).status(status);
+        })
     }
 }
 

@@ -23,7 +23,7 @@ const OrderService = {
         const newOrderId = lastOrderId + 1;
         order.id = newOrderId;
         orderDummyData.orders.push(order);
-        return order;
+        return orderDummyData.orders;
     },
 
     editAnOrder(id, order) {
@@ -39,7 +39,9 @@ const OrderService = {
             customer_phone_number: order.customer_phone_number,
             purchase_total: order.purchase_total,
         };
-        orderDummyData.orders.push(editedOrder);
+        if (orderIdAvailable) {
+            orderDummyData.orders = [editedOrder, ...newOrderList]
+        }
         return {
             editedOrder,
             orderIdAvailable,
