@@ -5,7 +5,7 @@ before_install:
   - cd api
   - npm install
 script:
-  - npm run test:travis
+  - npm run test
 cache:
   directories:
     - "api/node_modules"
