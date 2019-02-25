@@ -1,10 +1,8 @@
-// import { request } from 'supertest';
+import request  from 'supertest';
 
 import expect from 'expect';
 
-const request = require('supertest')
-
-import { app } from '../index';
+import app from '../index';
 
 import menu from '../utils/menuDummyData';
 

@@ -1,10 +1,8 @@
-// import { request } from 'supertest';
-
-const request = require('supertest')
+import request from 'supertest';
 
 import expect from 'expect';
 
-import { app } from '../index';
+import app from '../index';
 
 import orders from '../utils/orderDummyData';
 
