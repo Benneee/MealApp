@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Confirmation Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css">
+    <link rel="stylesheet" type="text/css" href="menus.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="body2">
+    
+
+    </div>
+                                                    
+    <div class="right">
+           <div class="contain">
+             <h4>Cart 
+               <span class="spanprice" style="color:black">
+                 <i class="fa fa-shopping-cart"></i> 
+                 <b>4</b>
+               </span>
+             </h4>
+             <p>
+                 <a href="#">Coconut rice</a> 
+                 <a>
+                       <input class="count" value="1" type="number">
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-times"></i>
+                    </a>
+                 <span class="spanprice">#900</span>
+           </p>
+           
+             <p>
+                 <a href="#">Macaroni</a>
+                 <a>
+                       <input class="count" value="1" type="number">
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-times"></i>
+                    </a>
+                     <span class="spanprice">#600</span>
+               </p>
+
+             <p>
+                 <a href="#">Spaghetti</a>
+                 <a>
+                       <input class="count" value="1" type="number">
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-times"></i>
+                    </a>
+                  <span class="spanprice">#600</span
+                   ></p>
+                   
+             <p>
+                 <a href="#">Beans and Plantain</a>
+                 <a>
+                       <input class="count" value="1" type="number">
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-times"></i>
+                    </a>
+                 <span class="spanprice">#600</span></p>
+             <hr>
+             <p>Total <span class="spanprice" style="color:black"><b>#2700</b></span></p>
+           </div>
+           <div>
+               <button class="btn openModal" onclick="document.getElementById('id01').style.display='block'">Proceed To Payment</button>
+           </div>
+   </div>
+
+                          
+<div id="id01" class="modal"> 
+   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span> 
+   <form class="modal-content animate"> 
+   <div class="container"> 
+     
+   
+       <div class="clearfix"> 
+            <h3>Your Total Order</h3>
+            <hr>
+            <p>#2700</p>
+       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> 
+       <button type="submit" class="signupbtn">Confirm Payment</button> 
+       </div> 
+   </div> 
+   </form> 
+</div> 
+</div>
+
+
+       
+
+
+
+
+
+
+<script> 
+
+var modal = document.getElementById('id01'); 
+
+
+window.onclick = function(event) { 
+if (event.target == modal) { 
+modal.style.display = "none"; 
+    } 
+} 
+
+</script> 
+<script src="index.js"></script>
+</body>
+</html>

@@ -79,6 +79,30 @@ button {
     border: 1px solid #888; 
     width: 60%;   
 } 
+
+@media (max-width: 600px) {
+
+  .modal { 
+    display: none;  
+    position: fixed;  
+    top: 0; 
+    width: auto; 
+    height: auto;  
+    overflow: auto;  
+    background-color: rgb(0,0,0);  
+    background-color: rgba(0,0,0,0.4);  
+    padding-top: 60px; 
+  } 
+  
+  
+.modal-content { 
+    background-color: #fefefe; 
+    margin: 5% auto 15% auto;  
+    border: 1px solid #888; 
+    width: 50%;   
+  } 
+
+}
   
   
 .close { 
@@ -102,6 +126,18 @@ button {
     clear: both; 
     display: table; 
 } 
+
+@media (max-width: 600px) {
+  .clearfix h3 hr p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  .clearfix h3 hr p {
+    text-align: center;
+  }
+}
   
   
 @media screen and (max-width: 300px) { 
