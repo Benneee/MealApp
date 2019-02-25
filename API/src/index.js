@@ -1,14 +1,15 @@
-import express from "express";
-import bodyParser from "body-parser";
+import express from 'express';
+import bodyParser from 'body-parser';
 
 // routes
-import mealRoutes from "../src/routes/meal.route";
-import menuRoutes from "../src/routes/menu.route";
-import orderRoutes from "../src/routes/order.route";
+import mealRoutes from './routes/meal.route';
+import menuRoutes from './routes/menu.route';
+import orderRoutes from './routes/order.route';
 
 
 const app = express();
 
+const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
@@ -21,9 +22,9 @@ app.use('/api/v1/meals', mealRoutes);
 app.use('/api/v1/menu', menuRoutes);
 app.use('/api/v1/orders', orderRoutes);
 
-const PORT = 3000;
+
 app.listen(PORT, () => {
-    console.log(`Server is running on Port ${PORT}`);
+  console.log(`Server is running on Port ${PORT}`);
 });
 
 
