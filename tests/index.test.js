@@ -1,6 +1,6 @@
-import request from 'supertest';
+import { request } from 'supertest';
 
-import { app } from '../index';
+import { app } from '../api/index';
 
 
 describe('API Test', () => {
