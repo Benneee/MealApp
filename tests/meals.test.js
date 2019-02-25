@@ -2,7 +2,7 @@ import  request from 'supertest';
 
 import expect from 'expect';
 
-import app from '../index';
+import  app  from '../api/src/index';
 
 import meal from '../utils/mealDummyData';
 

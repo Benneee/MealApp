@@ -1,6 +1,6 @@
 import  request  from 'supertest';
 
-import  app  from '../api/index';
+import  app  from '../api/src/index';
 
 
 describe('API Test', () => {
