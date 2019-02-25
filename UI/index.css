@@ -154,6 +154,7 @@ a.active {
   color: white;
   text-align: center;
   max-height: 40px;
+  padding-bottom: -1px;
 }
 
 
@@ -610,4 +611,28 @@ body {
 
 .vanish {
   display: none;
+}
+
+
+
+button#checkout {
+  width: 100%;
+  display: block;
+}
+
+ol li {
+  list-style-type: none;
+}
+
+button#signin {
+  width: 100%;
+  width: 100%;
+  display: block;
+  background-color: #b366c1;
+  color: white; 
+  padding: 14px 20px; 
+  margin: 8px 0; 
+  border: none; 
+  cursor: pointer; 
+  width: 100%; 
 }
