@@ -4,11 +4,11 @@ import { app } from '../index';
 
 
 describe('API Test', () => {
-    it('should return Holla Benneee! as response', (done) => {
+    it('should return Welcome To Book-A-Meal! as response', (done) => {
         request(app)
             .get('/')
             .expect(200)
-            .expect('Holla Benneee!')
+            .expect('Welcome To Book-A-Meal!')
             .end(done);
     });
 });
