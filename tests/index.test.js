@@ -1,4 +1,6 @@
-import { request } from 'supertest';
+// import { request } from 'supertest';
+
+const request = require('supertest')
 
 import { app } from '../api/index';
 
