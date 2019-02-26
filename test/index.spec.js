@@ -1,4 +1,4 @@
-const expect = require('chai').expect
+const expect = require('expect')
 const server = require('../index');
 
 describe('test', () => {
