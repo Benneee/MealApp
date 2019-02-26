@@ -1,11 +1,11 @@
 language: node_js
-
 node_js:
-  - "stable"
-
+  - "node"
 install:
   - cd api
   - npm install
-
+cache:
+  direvtories:
+    - "api/node_modules"  
 script:
   - npm run test
