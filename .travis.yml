@@ -4,5 +4,3 @@ node_js:
 cache:
   directories:
     - "api/node_modules"
-script:
-  - npm run tests
