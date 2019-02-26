@@ -10,3 +10,5 @@ before_script:
   - cd api
 script:
   - npm run test
+notifications:
+  - email: false
