@@ -1,8 +1,12 @@
-const expect = require('expect')
-const server = require('../index');
+const request = require('supertest')
+const app = require('../api/src/index')
 
-describe('test', () => {
-  it('should return a string', () => {
-    expect('ci with travis').to.equal('ci with travis');
-  });
+describe('API Test', () => {
+    it('should return Welcome To Book-A-Meal! as response', (done) => {
+        request(app)
+            .get('/')
+            .expect(200)
+            .expect('Welcome To Book-A-Meal!')
+            .end(done);
+    });
 });
