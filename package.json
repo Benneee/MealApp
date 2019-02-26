@@ -47,5 +47,9 @@
     "mocha": "^5.2.0",
     "nodemon": "^1.18.10",
     "supertest": "^3.4.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/Benneee/MealApp/issues"
+  },
+  "homepage": "https://github.com/Benneee/MealApp#readme"
 }
