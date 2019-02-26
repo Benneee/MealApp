@@ -10,7 +10,7 @@
     "start": "nodemon --exec babel-node src/index",
     "babel-build": "babel src -d dist",
     "clean": "rm -rf dist && mkdir dist",
-    "build": "npm run clean && npm run babel-build",
+    "build": "npm run clean && npm run babel-build"
   },
   "engine": {
     "node": "10.13.0"
