@@ -1,11 +1,12 @@
 language: node_js
 node_js:
   - "node"
-install:
+before_script:
   - cd api
+install:
   - npm install
 cache:
-  direvtories:
+  directories:
     - "api/node_modules"  
 script:
   - npm run test
