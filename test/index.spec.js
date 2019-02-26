@@ -3,9 +3,7 @@ const request = require('supertest')
 
 describe('test', () => {
   it('should return a string', (done) => {
-      request(server)
-        .expect('ci with travis')
-        .expect(200)
+    expect('ci with travis')
         .end(done);
   });
 });
