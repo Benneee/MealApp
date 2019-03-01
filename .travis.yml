@@ -5,11 +5,11 @@ node_js:
 env:
   global: CODECLIMATE_REPO_TOKEN=91d4980fbe5dcfa61ce236486cefe8515e9c3de38438ef18df0ed241fa4ac5d0
 install:
-  - cd api
+  - cd API
   - npm install
 cache:
   directories:
-    - "api/node_modules"
+    - "API/node_modules"
 before_script:
     - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
     - chmod +x ./cc-test-reporter
