@@ -1,4 +1,4 @@
-/api/node_modules
-/UI/node_modules
 /node_modules
 /dist
+/nyc_output
+lcov.info

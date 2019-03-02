@@ -10,7 +10,11 @@
     "start": "nodemon --exec babel-node src/index",
     "babel-build": "babel src -d dist",
     "clean": "rm -rf dist && mkdir dist",
-    "build": "npm run clean && npm run babel-build"
+    "build": "npm run clean && npm run babel-build",
+    "generate-lcov": "nyc report --reporter=text-lcov > lcov.info",
+    "coveralls-coverage": "coveralls < lcov.info",
+    "codeclimate-coverage": "codeclimate-test-reporter < lcov.info",
+    "coverage": "nyc npm run test && npm run generate-lcov && npm run coveralls-coverage && npm run codeclimate-coverage"
   },
   "engine": {
     "node": "10.13.0"
@@ -40,12 +44,20 @@
     "@babel/preset-env": "^7.3.1",
     "@babel/register": "^7.0.0",
     "babel-eslint": "^10.0.1",
+    "codeclimate-test-reporter": "^0.5.1",
+    "coveralls": "^3.0.3",
     "eslint": "^5.13.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
     "expect": "^1.20.2",
     "mocha": "^5.2.0",
+    "mocha-lcov-reporter": "^1.3.0",
     "nodemon": "^1.18.10",
+    "nyc": "^13.3.0",
     "supertest": "^3.4.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/Benneee/MealApp/issues"
+  },
+  "homepage": "https://github.com/Benneee/MealApp#readme"
 }
