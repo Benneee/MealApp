@@ -1,4 +1,4 @@
 api/node_modules
 api/dist
-api/nyc_output
+api/.nyc_output
 api/lcov.info
