@@ -60,7 +60,7 @@ describe('Order API Test', () =>{
         it('should edit an order by id', (done) => {
             const orderId = orderDummyData.orders[0].id
             request(app)
-                .put('/api/v1/orders/2')
+                .put(`/api/v1/orders/${orderId}`)
                 .send(orders)
                 .expect(202)
                 .expect((res) => {
@@ -76,7 +76,7 @@ describe('Order API Test', () =>{
         it('should return a 404 if order id does not exist', (done) => {
             const orderId = orderDummyData.orders[orderDummyData.orders.length-1].id + 1
             request(app)
-                .put('/api/v1/orders/10')
+                .put(`/api/v1/orders/${orderId}`)
                 .send(orders)
                 .expect(404)
                 .expect((res) => {

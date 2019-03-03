@@ -36,12 +36,10 @@ const MealService = {
         const checkId = parseInt(id, Number);
         const newMealList = mealDummyData.meals.filter(meal => meal.id !== checkId);
         const idAvailable = (mealDummyData.meals.length !== newMealList.length);
-        
+        mealDummyData.meals = newMealList;
+
         if(idAvailable) {
-            mealDummyData.meals = [ ...newMealList];
-        }
-        return {
-            idAvailable
+            return idAvailable;
         }
     },
 

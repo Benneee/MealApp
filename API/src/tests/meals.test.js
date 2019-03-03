@@ -118,11 +118,11 @@ describe('Meal API\'s test', () => {
             this test should return a 202 when deletion is complete
         */
 
-        it('should return a 202 when deletion of a meal with given id is complete', (done) => {
-            const mealId = mealDummyData.meals[mealDummyData.meals.length - 1].id;
+        it('should return a 200 when deletion of a meal with given id is complete', (done) => {
+            const mealId = mealDummyData.meals[0].id;
             request(app)
                 .delete(`/api/v1/meals/${mealId}`)
-                .expect(202)
+                .expect(200)
                 .expect((res) => {
                     expect(res.body.response.status)
                     .toEqual('success')

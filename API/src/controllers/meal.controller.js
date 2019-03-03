@@ -97,7 +97,7 @@ const MealController = {
                 status: 'success',
                 message: `Meal with id: ${id} deleted successfully`,
             };
-            status = 202;
+            status = 200;
         } else {
             response = {
                 ...response,
