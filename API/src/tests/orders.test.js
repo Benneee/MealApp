@@ -5,6 +5,7 @@ import expect from 'expect';
 import { app } from '../index';
 
 import orders from '../utils/orderDummyData';
+import orderDummyData from '../utils/orderDummyData';
 
 
 describe('Order API Test', () =>{
@@ -57,19 +58,33 @@ describe('Order API Test', () =>{
 
     describe('#PUT, edit an order', () => {
         it('should edit an order by id', (done) => {
+            const orderId = orderDummyData.orders[0].id
             request(app)
                 .put('/api/v1/orders/2')
                 .send(orders)
                 .expect(202)
+                .expect((res) => {
+                    expect(res.body.response.status)
+                    .toEqual('success')
+                    expect(res.body.response.message)
+                    .toEqual(`Order with id: ${orderId} edited successfully.`)
+                })
                 .end(done);
         });
 
 
         it('should return a 404 if order id does not exist', (done) => {
+            const orderId = orderDummyData.orders[orderDummyData.orders.length-1].id + 1
             request(app)
                 .put('/api/v1/orders/10')
                 .send(orders)
                 .expect(404)
+                .expect((res) => {
+                    expect(res.body.response.status)
+                    .toEqual('error')
+                    expect(res.body.response.message)
+                    .toEqual(`Order with id: ${orderId} not found`)
+                })
                 .end(done);
         });
     });
