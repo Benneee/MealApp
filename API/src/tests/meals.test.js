@@ -5,6 +5,7 @@ import expect from 'expect';
 import { app } from '../index';
 
 import meal from '../utils/mealDummyData';
+import mealDummyData from '../utils/mealDummyData';
 
 
 describe('Meal API\'s test', () => {
@@ -79,10 +80,17 @@ describe('Meal API\'s test', () => {
             this test should return a 202 after an edit
         */
        it('should edit a meal by id successfully', (done) => {
+        const mealId = mealDummyData.meals[0].id;
            request(app)
-            .put('/api/v1/meals/4')
+            .put(`/api/v1/meals/${mealId}`)
             .send(meal)
             .expect(202)
+            .expect((res) => {
+                expect(res.body.response.status)
+                .toEqual('success')
+                expect(res.body.response.message)
+                .toEqual(`Meal with id: ${mealId} edited successfully.`)
+            })
             .end(done);
        });
 
@@ -90,10 +98,17 @@ describe('Meal API\'s test', () => {
         this test should return a 404 if meal with given id is not found
        */
       it('should return a 404 status if id of meal does not exist', (done) => {
+        const mealId = mealDummyData.meals[mealDummyData.meals.length-1].id + 1
           request(app)
-            .put('/api/v1/meals')
+            .put(`/api/v1/meals/${mealId}`)
             .send(meal)
             .expect(404)
+            .expect((res) => {
+                expect(res.body.response.status)
+                .toEqual('error')
+                expect(res.body.response.message)
+                .toEqual(`Meal with id: ${mealId} not found.`)
+            })
             .end(done);
       });
     });
@@ -103,10 +118,17 @@ describe('Meal API\'s test', () => {
             this test should return a 202 when deletion is complete
         */
 
-        it('should return a 202 when deletion of a meal with given id is complete', (done) => {
+        it('should return a 200 when deletion of a meal with given id is complete', (done) => {
+            const mealId = mealDummyData.meals[0].id;
             request(app)
-                .delete('/api/v1/meals/3')
-                .expect(202)
+                .delete(`/api/v1/meals/${mealId}`)
+                .expect(200)
+                .expect((res) => {
+                    expect(res.body.response.status)
+                    .toEqual('success')
+                    expect(res.body.response.message)
+                    .toEqual(`Meal with id: ${mealId} deleted successfully`)
+                })
                 .end(done);
         });
 
@@ -115,9 +137,16 @@ describe('Meal API\'s test', () => {
         */
 
         it('should return a 404 if meal id does not exist', (done) => {
+            const mealId = mealDummyData.meals[mealDummyData.meals.length - 1].id + 1;
             request(app)
-                .delete('/api/v1/meals/10')
+                .delete(`/api/v1/meals/${mealId}`)
                 .expect(404)
+                .expect((res) => {
+                    expect(res.body.response.status)
+                    .toEqual('error')
+                    expect(res.body.response.message)
+                    .toEqual(`Meal with id: ${mealId} not found.`)
+                })
                 .end(done);
         });
     });

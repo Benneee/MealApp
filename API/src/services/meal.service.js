@@ -37,11 +37,9 @@ const MealService = {
         const newMealList = mealDummyData.meals.filter(meal => meal.id !== checkId);
         const idAvailable = (mealDummyData.meals.length !== newMealList.length);
         mealDummyData.meals = newMealList;
-        
-        if(id) {
-          return idAvailable;
-        } else {
-           return `Meal with id: ${id} unavailable`;
+
+        if(idAvailable) {
+            return idAvailable;
         }
     },
 
